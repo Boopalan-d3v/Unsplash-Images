@@ -3,9 +3,14 @@ import { createContext, useContext, useState, useEffect } from "react";
 const AppContext = createContext()
 
 export const AppProvider = ({children}) => {
-    
+    const [isDarkTheme, setIsDarkTheme] = useState(false)
 
-    return <AppContext.Provider value={{}}>
+    const toggleDarkTheme = () => {
+        const newDarkTheme = !isDarkTheme
+        setIsDarkTheme(newDarkTheme);
+    }
+
+    return <AppContext.Provider value={{isDarkTheme, toggleDarkTheme}}>
         {children}
     </AppContext.Provider>
 }
