@@ -308,69 +308,68 @@ Toggle Container
 ========
 */
 
-.toggle-container {
-  width: var(--view-width);
+.toggle-container{
+  width: var(--backgroundColor);
   max-width: var(--max-width);
   padding: 1rem 0;
-  margin: 0 auto;
+  margin:0 auto;
+  /*border: 2px solid red;*/
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
-.dark-toggle {
-  background: transparent;
-  border-color: transparent;
-  width: 5rem;
-  height: 2rem;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
+.dark-toggle{
+background: transparent;
+border-color: transparent;
+width: 5rem;
+height: 2rem;
+display: grid;
+place-items: center;
+cursor: pointer;
 }
-.toggle-icon {
-  font-size: 1.5rem;
+
+.toggle-icon{
+  font-size: 1.3rem;
   color: var(--textColor);
 }
+
 /* 
 ========
 Search Form
 ========
 */
-.title {
-  color: var(--primary-500);
+.title{
+  color: var(--primary-400);
 }
-.search-form {
+.search-form{
   width: var(--view-width);
   max-width: var(--fixed-width);
-  margin: 0 auto;
+  margin:0 auto;
   margin-top: 2rem;
   display: grid;
   grid-template-columns: 1fr auto;
 }
 
-.search-input {
+.form-input{
   border-color: var(--grey-300);
   transition: var(--darkModeTransition);
   color: var(--textColor);
   border-radius: 0;
-
-  /* border-right: none; */
 }
-
-.search-form .btn {
+.search-form .btn{
   border-radius: 0;
 }
-.search-form .btn:hover {
+.search-form .btn:hover{
   background: var(--primary-300);
   color: var(--black);
 }
-
 /* 
 ========
 Gallery
 ========
 */
 
-.image-container {
+.image-container{
   width: var(--view-width);
   max-width: var(--max-width);
   margin: 3rem auto;
@@ -378,17 +377,17 @@ Gallery
   gap: 2rem;
 }
 
-.image-container .img {
-  height: 10rem;
+.image-container .img{
+  height: 20rem;
 }
 
-@media (min-width: 768px) {
-  .image-container {
+@media (min-width:768px){
+  .image-container{
     grid-template-columns: 1fr 1fr;
   }
 }
-@media (min-width: 992px) {
-  .image-container {
+@media (min-width:992px){
+  .image-container{
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
