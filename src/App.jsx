@@ -2,6 +2,7 @@ import Gallery from "./components/Gallery";
 import SearchForm from "./components/SearchForm";
 import ThemeToggle from "./components/ThemeToggle";
 import {QueryClientProvider, QueryClient} from '@tanstack/react-query'
+import {ReactQueryDevtools} from '@tanstack/react-query-devtools'
 
 const App = () => {
 
@@ -12,6 +13,7 @@ const App = () => {
       <ThemeToggle/>
       <SearchForm/>
       <Gallery/>
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   </main>;
 };
